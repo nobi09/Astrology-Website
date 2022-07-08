@@ -1,0 +1,451 @@
+* {
+box-sizing : border-box;
+}
+body, html {
+height : 100%;
+}
+body {
+margin : 0;
+font-family : 'Poppins', sans-serif;
+font-size : 1.125rem;
+font-weight : 300;
+background-color : lightgrey;
+}
+.header {
+background-color : black;
+padding : 15px;
+text-align : left;
+color : white;
+}
+#myDIV {
+width : 100%;
+padding : 50px 0;
+text-align : center;
+background-color : lightblue;
+margin-top : 20px;
+}
+h1:hover {
+color : darkorange;
+}
+.topnav {
+overflow : hidden;
+background-color : white;
+}
+.topnav a {
+float : left;
+display : flex;
+color : #1f2833;
+text-align : center;
+padding : 14px 16px;
+padding-bottom : 10px;
+text-decoration : none;
+font-size : 17px;
+font-weight : bold;
+}
+.topnav a:hover {
+color : darkorange;
+}
+a:hover {
+color : darkorange;
+}
+.topnav a.active {
+background-color : midnightblue;
+color : white;
+}
+.topnav .icon {
+display : none;
+background-color : white;
+}
+.column a.active1 {
+color : red;
+}
+.container {
+display : grid;
+grid-template-columns : 100%;
+margin : auto;
+width : 90%;
+background-color : white;
+}
+.tabBlock {
+background-color : #57574f;
+border : #FFA54F solid 0;
+border-radius : 5px;
+max-width : 200px;
+width : 100%;
+overflow : hidden;
+display : block;
+}
+.clock {
+vertical-align : middle;
+font-family: 'Orbitron', sans-serif;
+font-size : 40px;
+font-weight : normal;
+color : #FFF;
+padding : 0 10px;
+}
+.clocklg {
+vertical-align : middle;
+font-family: 'Orbitron', sans-serif;
+font-size : 20px;
+font-weight : normal;
+color : #FFF;
+}
+.parallax {
+background-image : url("images/Planets.jpg");
+height : 100%;
+width : 100%;
+background-attachment : fixed;
+background-position : center;
+background-repeat : no-repeat;
+background-size : cover;
+}
+hr.new5 {
+border : #1792d2 solid 5px;
+border-radius : 50px;
+}
+.column.middle {
+width : 50%;
+}
+.column.right {
+width : 30%;
+}
+.column.left {
+width : 70%;
+}
+.side {
+flex : 30%;
+padding : 20px;
+}
+.responsive {
+padding-top : 70px;
+width : 100%;
+height : auto;
+}
+img:hover {
+box-shadow : 0 0 2px 1px rgb(0, 140, 186, 0.5);
+}
+footer {
+overflow : hidden;
+background-color : black;
+color : white;
+text-align : center;
+width : 100%;
+bottom : 0;
+}
+@media screen and (max-width: 600px) {
+.column.side, .column.middle, .column.left, .column.right {
+width : 100%;
+}
+.topnav a, hr:not(:first-child) {
+display : none;
+}
+.topnav a.icon {
+float : right;
+display : block;
+}
+}
+@media (max-width: 600px) {
+header {
+text-align : justify;
+}
+body {
+text-align : center;
+}
+.topnav.responsive {
+position : relative;
+}
+.topnav.responsive .icon {
+position : absolute;
+right : 0;
+top : 0;
+}
+.topnav.responsive a {
+float : none;
+display : block;
+text-align : left;
+}
+.row, .topnav, .row2, #gallery {
+flex-direction : column;
+}
+.logo {
+width : 100%;
+}
+footer {
+position : inherit;
+bottom : 0;
+align-content : center;
+}
+.planets {
+width : 50px;
+height : 50px;
+}
+}
+.btn {
+color : white;
+padding : 10px 10px;
+font-size : 10px;
+}
+@media screen and (max-width: 992px) {
+.column.side, .column.middle, .column.left, .column.right {
+width : 100%;
+}
+.topnav a, hr:not(:first-child) {
+display : none;
+}
+.topnav a.icon {
+float : right;
+display : block;
+}
+}
+@media (max-width: 992px) {
+header {
+text-align : justify;
+}
+body {
+text-align : center;
+}
+.topnav.responsive {
+position : relative;
+}
+.topnav.responsive .icon {
+position : absolute;
+right : 0;
+top : 0;
+}
+.topnav.responsive a {
+float : none;
+display : block;
+text-align : left;
+}
+.row, .topnav, .row2 {
+flex-direction : column;
+}
+.logo {
+width : 100%;
+}
+}
+.btn {
+color : white;
+padding : 10px 10px;
+font-size : 10px;
+}
+.btn:hover {
+background-color : darkorange;
+}
+#bt1:hover, #bt2:hover, #bt3:hover, #bt4:hover {
+color : darkorange;
+}
+#bt2, #bt3, #bt4 {
+color : white;
+}
+#bt1 {
+color : navajowhite;
+}
+h1, a {
+letter-spacing : 2px;
+font-family : 'Ubuntu', sans-serif;
+margin-top : 0;
+color : white;
+text-decoration : none;
+}
+h2 {
+letter-spacing : 2px;
+font-family : 'Ubuntu', sans-serif;
+margin-top : 0;
+color : #25274d;
+}
+h3 {
+letter-spacing : 2px;
+margin-top : 0;
+color : darkorange;
+}
+p {
+color : black;
+}
+.open-button {
+background-color : navy;
+color : white;
+padding : 16px 20px;
+border : none;
+cursor : pointer;
+opacity : 0.7;
+position : fixed;
+bottom : 23px;
+right : 28px;
+width : 280px;
+}
+.form-popup {
+display : none;
+position : fixed;
+bottom : 0;
+right : 15px;
+border : #f1f1f1 solid 3px;
+z-index : 9;
+}
+.form-container {
+max-width : 300px;
+padding : 10px;
+background-color : white;
+color : black;
+}
+.form-container input[type="text"], .form-container input[type="password"] {
+width : 100%;
+padding : 15px;
+margin : 5px 0 22px 0;
+border : none;
+background : #f1f1f1;
+}
+.form-container input[type="text"]:focus, .form-container input[type="password"]:focus {
+background-color : #ddd;
+outline : none;
+}
+.form-container .btn {
+background-color : #4CAF50;
+color : white;
+padding : 16px 20px;
+border : none;
+cursor : pointer;
+width : 100%;
+margin-bottom : 10px;
+opacity : 0.8;
+}
+.form-container .cancel {
+background-color : red;
+}
+.form-container .btn:hover, .open-button:hover {
+opacity : 1;
+}
+.fa {
+padding : 10px;
+font-size : 20px;
+width : 45px;
+text-align : left;
+text-decoration : none;
+margin : 5px 5px;
+}
+.fa:hover {
+opacity : 0.7;
+}
+.fa-facebook {
+background : #3B5998;
+color : white;
+}
+.fa-youtube {
+background : #bb0000;
+color : white;
+}
+.fa-instagram {
+background : #125688;
+color : white;
+}
+.left, .right {
+width : 25%;
+padding : 20px;
+}
+.middle {
+width : 50%;
+padding : 20px;
+}
+.column {
+float : left;
+padding : 30px;
+}
+.row:after {
+content : "";
+display : table;
+clear : both;
+}
+.vl {
+border-left : 2px solid white;
+left : 50%;
+margin-left : 20px;
+top : 0;
+}
+hr {
+display : block;
+margin-top : 0.5em;
+margin-bottom : 0.5em;
+margin-left : auto;
+margin-right : auto;
+border-style : inset;
+border-width : 1px;
+}
+a:hover {
+color : darkorange;
+}
+
+/*Gallery*/
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: inherit;
+  top: 40%;
+  width: 100%;
+  padding: 16px;
+  margin-top: -50px;
+  color: darkorange;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  color: blue;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: navy;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}

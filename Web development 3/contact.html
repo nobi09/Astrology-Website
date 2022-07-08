@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Astronomy</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+ 
+    
+    
+</head>
+<body onload="startTime(); checkCookie()">
+<div class="header">
+<a href="home2.html" style="text-decoration: none;" ><h1>Astronomy</h1></a>  
+
+</div>
+<div class="topnav" id="myTopnav">
+   
+  <a href="home2.html" ><i class="fa fa-home"></i></a>
+   
+  <a href="news.html" >News</a>
+  <a href="Gallery.html">Gallery</a>
+  <a href="contact.html" class="active">Contact</a>
+        <a href="equipment.html">Equipment</a>
+        <a href="resources.html">Resources</a>
+        <a href="guidelines.html">Guidelines</a>
+        <a href="events.html">Events</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+     <i class="fa fa-bars"></i>
+    
+  </a>
+</div>
+
+    <div id="txt" style="padding-left: 50%; padding-right: 50%; padding-top: 10px; padding-bottom: 10px; font-size: 20px; background-color: black; color: darkorange">   
+    </div>
+   
+      
+<div class="row" style="display: flex;
+  justify-content: center;
+  align-items: center; background-color: black; ">
+        <h2 style="color: white">Rising and setting times</h2>
+
+    </div>
+    <div class="row" style="display: flex;
+  justify-content: center;
+  align-items: center; background-color: black;padding-bottom: 15px ">
+        
+    
+    <button style="background: none; color: white; 	margin: 0; 	border: none;	cursor: pointer;"  onclick="Sun()" class="btu">Sun and Moon </button>
+    <button style="background: none; color: white; 	margin: 0; 	border: none;	cursor: pointer;" onclick="Planet1()">Mercury and Venus</button>
+    <button style="background: none; color: white; 	margin: 0; 	border: none;	cursor: pointer;" onclick="Planet2()">Mars and Jupiter</button>
+    <button style="background: none; color: white; 	margin: 0; 	border: none;	cursor: pointer;" onclick="Planet3()">Saturn and Uranus</button>
+   </div>
+    
+   <!-----------------------   RISING AND SETTING SITEMS CALLED BY THE BUTTONS---------------------------------------------------------------------------------------------------------->
+       
+<div id="sun" style="background-color: black; color: white; display: flex;
+  justify-content: center;
+  align-items: center;">
+  
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th></th>
+        <th>  </th>
+        <th>  </th>
+        <th>Moon  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/sun.jfif" style="width: 100px; height: 100px"></td>
+        <td></td>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/moon.jfif" style="width: 100px; height: 100px"></td>
+        </tr>
+        
+      <tr>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+        <td></td>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+    
+                  
+</div>
+  
+    
+<div id="p1" style="display: none;background-color: black; color: white;
+  justify-content: center;  align-items: center;">
+<table class="table">
+    <thead>
+      <tr>
+        <th>Mercury</th>
+        <th></th>
+        <th>  </th>
+        <th>  </th>
+        <th>Venus  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/mercury.jfif" style="width: 100px; height: 100px"></td>
+        <td></td>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/venus.jfif" style="width: 100px; height: 100px"></td>
+        </tr>
+        
+      <tr>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+        <td></td>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+    </div>
+ <div id="p2" style="display: none;background-color: black; color: white;
+  justify-content: center;  align-items: center;">
+<table class="table">
+    <thead>
+      <tr>
+        <th>Mars</th>
+        <th></th>
+        <th>  </th>
+        <th>  </th>
+        <th>Jupiter  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/mars.jfif" style="width: 100px; height: 100px"></td>
+        <td></td>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/jupiter.jfif" style="width: 100px; height: 100px"></td>
+        </tr>
+        
+      <tr>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+        <td></td>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+    </div>
+ <div id="p3" style="display: none;background-color: black; color: white;
+  justify-content: center;  align-items: center;">
+<table class="table">
+    <thead>
+      <tr>
+        <th>Saturn</th>
+        <th></th>
+        <th>  </th>
+        <th>  </th>
+        <th>Uranus  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/saturn.jfif" style="width: 100px; height: 100px"></td>
+        <td></td>
+        <td>Rise</td>
+        <td>6 : 03 AM</td>
+        <td rowspan="2"><img src="images/uranus.jfif" style="width: 100px; height: 100px"></td>
+        </tr>
+        
+      <tr>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+        <td></td>
+        <td>Set</td>
+        <td>9 : 03 PM</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+    </div>
+    
+
+   
+   
+<!-----------------------   END OF RISING AND SETTING SITEMS CALLED BY THE BUTTONS---------------------------------------------------------------------------------------------------------->
+
+<div class="parallax" style="height: 300px"></div>
+
+<div class="container">
+    
+   
+   
+       
+    
+    <h2 style="text-align: center; padding-top: 20px">Contact Information</h2>
+    <p style="padding: 20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    <p style="padding: 20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+  
+    
+    
+    
+    
+    
+        <h2 style="text-align: center">FOLLOW US ON </h2>
+
+    <div class="row" style="display: inherit; justify-content: center">
+   <a href="https://www.facebook.com/AstronomyMagazine/" class="fa fa-facebook" style=" padding-left: %"></a>
+
+        <a href="https://www.youtube.com/channel/UCQkLvACGWo8IlY1-WKfPp6g" class="fa fa-youtube"></a> 
+<a href="https://www.instagram.com/astrophysics_/" class="fa fa-instagram"></a>
+    
+     
+    </div>
+  
+    </div>
+  
+ 
+    
+    
+
+
+   <div class="parallax" style="height: 300px"></div>
+
+
+
+
+<footer>
+    <div class="row">
+        <div class="column side">
+        <a href="home2.html" style="text-decoration: none; padding-left: 100px;" ><h1>Astronomy</h1></a>
+  </div>
+    <div class="column side" >
+    <div >
+        <img src="images/logo1.jpg" alt="" class="widget-class">
+        
+        </div></div>
+       
+         <div class="column middle"  >
+   
+      <h2 style="color: white" >FOLLOW US ON </h2>
+            <ul style="list-style-type:none; align-content: center ">
+   <li><a href="https://www.facebook.com/AstronomyMagazine/" class="fa fa-facebook"></a><a href="https://www.facebook.com/AstronomyMagazine/">Facebook</a></li>
+
+<li><a href="https://www.youtube.com/channel/UCQkLvACGWo8IlY1-WKfPp6g" class="fa fa-youtube"> </a><a href="https://www.youtube.com/channel/UCQkLvACGWo8IlY1-WKfPp6g">Youtube</a></li>
+<li><a href="https://www.instagram.com/astrophysics_/" class="fa fa-instagram"></a><a href="https://www.instagram.com/astrophysics_/">Instagram</a></ul>
+</div>        
+
+    <div class="column side">
+        <ul style="list-style-type:none; " >
+<li><a href="home2.html" >Home</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="Gallery.html">Gallery</a></li>
+  <li><a href="contact.html" class="active1">Contact</a></li>
+       <li><a href="equipment.html">Equipment</a></li>
+       <li> <a href="resources.html">Resources</a></li>
+        <li><a href="guidelines.html">Guidelines</a></li>
+        <li><a href="events.html">Events</a></li></ul>
+  </div>
+          
+        
+
+    
+
+       
+   </div>
+
+<button class="open-button" onclick="openForm()">Subscribe to our newsletter</button>
+
+<div class="form-popup" id="myForm">
+  <form id="form1" name="form1" onSubmit="return setCookie();" action="confirmation.html" class="form-container">
+    <h1 style="color: navy; font-size: 20px">FREE EMAIL NEWSLETTER
+</h1>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" id="firstname" required>
+      
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+
+    
+
+    <button type="submit" class="btn">Sign up</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+    
+//NewsLetter form  
+    
+    
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+//////////////Cookie 
+function setCookie(){
+		var firstname =document.getElementById("firstname").value;
+		document.cookie="firstname=" + escape(firstname);
+		
+		var email =document.getElementById("email").value;
+		document.cookie="email=" + escape(email);
+		alert(unescape(document.cookie));
+		
+		return true;
+	}
+</script>
+      
+  <script>
+      
+ //////////////////////////////////////Rising and setting times div calling   
+      
+function Sun() {
+  var x = document.getElementById("sun");
+  var y = document.getElementById("p1");
+  var z = document.getElementById("p2");
+  var w = document.getElementById("p3");
+
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "none";
+  } 
+}
+    
+    
+function Planet1() {
+var x = document.getElementById("sun");
+  var y = document.getElementById("p1");
+  var z = document.getElementById("p2");
+      var w = document.getElementById("p3");
+
+    
+     if (y.style.display === "none") {
+    x.style.display = "none";
+    y.style.display = "flex";
+    z.style.display = "none";
+    w.style.display = "none";
+   
+  } 
+}
+    
+    
+function Planet2() {
+var x = document.getElementById("sun");
+  var y = document.getElementById("p1");
+  var z = document.getElementById("p2");
+      var w = document.getElementById("p3");
+
+     if (z.style.display === "none") {
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "flex";
+     w.style.display = "none";
+
+  } 
+}
+
+    
+function Planet3() {
+var x = document.getElementById("sun");
+  var y = document.getElementById("p1");
+  var z = document.getElementById("p2");
+var w = document.getElementById("p3");
+
+     if (w.style.display === "none") {
+    x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "flex";
+  } 
+}
+  
+      
+      
+ //Cookie 
+/*
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
+
+<script>
+      
+///////////////////////////////////////////Articles div calling   
+      
+function bt1() {
+  var x = document.getElementById("div1");
+  var y = document.getElementById("div2");
+  var z = document.getElementById("div3");
+  var w = document.getElementById("div4");
+  var a = document.getElementById("bt1");
+  var b = document.getElementById("bt2");
+  var c = document.getElementById("bt3");
+  var d = document.getElementById("bt4");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "none";
+    a.style.color = "navajowhite";
+    b.style.color = "white";
+    c.style.color = "white";
+    d.style.color = "white";
+   
+  } 
+}
+    
+    
+function bt2() {
+  var x = document.getElementById("div1");
+  var y = document.getElementById("div2");
+  var z = document.getElementById("div3");
+  var w = document.getElementById("div4");
+  var a = document.getElementById("bt1");
+  var b = document.getElementById("bt2");
+  var c = document.getElementById("bt3");
+  var d = document.getElementById("bt4");
+
+
+
+    
+     if (y.style.display === "none") {
+    x.style.display = "none";
+    y.style.display = "block";
+    z.style.display = "none";
+    w.style.display = "none";
+    a.style.color = "white";
+    b.style.color = "navajowhite";
+    c.style.color = "white";
+    d.style.color = "white";
+   
+  } 
+}
+    
+    
+function bt3() {
+ var x = document.getElementById("div1");
+  var y = document.getElementById("div2");
+  var z = document.getElementById("div3");
+  var w = document.getElementById("div4");
+  var a = document.getElementById("bt1");
+  var b = document.getElementById("bt2");
+  var c = document.getElementById("bt3");
+  var d = document.getElementById("bt4");
+
+
+     if (z.style.display === "none") {
+     x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "block";
+    w.style.display = "none";
+    a.style.color = "white";
+    b.style.color = "white";
+    c.style.color = "navajowhite";
+    d.style.color = "white";
+
+  } 
+}
+
+    
+function bt4() {
+ var x = document.getElementById("div1");
+  var y = document.getElementById("div2");
+  var z = document.getElementById("div3");
+  var w = document.getElementById("div4");
+  var a = document.getElementById("bt1");
+  var b = document.getElementById("bt2");
+  var c = document.getElementById("bt3");
+  var d = document.getElementById("bt4");
+
+     if (w.style.display === "none") {
+     x.style.display = "none";
+    y.style.display = "none";
+    z.style.display = "none";
+    w.style.display = "block";
+    a.style.color = "white";
+    b.style.color = "white";
+    c.style.color = "white";
+    d.style.color = "navajowhite";
+  } 
+}
+    
+</script>
+
+    
+   
+    <script>
+        
+////////////////////////////////////////////Digital clock
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+   
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+    
+              
+        
+     
+</footer>
+</body>
+</html>
